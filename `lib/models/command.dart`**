@@ -1,0 +1,24 @@
+
+```dart
+import 'package:hive/hive.dart';
+
+part 'command.g.dart';
+
+@HiveType(typeId: 0)
+class VoiceCommand {
+  @HiveField(0)
+  final String text;
+  
+  @HiveField(1)
+  final DateTime timestamp;
+
+  VoiceCommand(this.text, this.timestamp);
+}
+```
+
+Generate Hive adapters:
+```bash
+flutter packages pub run build_runner build
+```
+
+---

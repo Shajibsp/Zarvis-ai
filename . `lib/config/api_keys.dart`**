@@ -1,0 +1,15 @@
+
+```dart
+abstract class ApiConfig {
+  // Azure Cognitive Services
+  static const azureTtsKey = 'YOUR_AZURE_KEY';
+  static const azureRegion = 'southeastasia';
+  
+  // Porcupine Wake Word
+  static const porcupineAccessKey = 'YOUR_PORCUPINE_KEY';
+  
+  // Firebase (optional)
+  static const firebaseAndroid = 'google-services.json';
+  static const firebaseIOS = 'GoogleService-Info.plist';
+}
+```

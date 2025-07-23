@@ -1,16 +1,25 @@
 name: zaarvis_ai
-description: AI voice assistant app
-publish_to: 'none'
+description: A personal AI assistant built by Shojib Parvez.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=3.1.0 <4.0.0"
+  sdk: '>=2.18.0 <3.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  flutter_tts: ^3.8.2
-  permission_handler: ^11.3.0
+  speech_to_text: ^5.5.0
+  flutter_tts: ^4.0.2
+  avatar_glow: ^2.0.2
+  permission_handler: ^11.0.1
+  shared_preferences: ^2.2.2
+  provider: ^6.0.5
+  flutter_sound: ^9.2.13
+  just_audio: ^0.9.35
+  assets_audio_player: ^3.0.3+8
+  flutter_local_notifications: ^17.1.0
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/zaarvis_avatar.png

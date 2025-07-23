@@ -1,0 +1,28 @@
+
+```dart
+import 'package:speech_to_text/speech_to_text.dart';
+import 'package:permission_handler/permission_handler.dart';
+
+class SpeechToTextService {
+  static final _speech = SpeechToText();
+
+  static Future<bool> initialize() async {
+    await Permission.microphone.request();
+    return await _speech.initialize();
+  }
+
+  static Future<void> listen({
+    required Function(String) onResult,
+    Function(String)? onError,
+  }) async {
+    try {
+      await _speech.listen(
+        onResult: (result) => result.finalResult ? onResult(result.recognizedWords) : null,
+        localeId: Platform.isIOS ? 'en-US' : 'bn-BD',
+      );
+    } catch (e) {
+      onError?.call('STT Error: ${e.toString()}');
+    }
+  }
+}
+```

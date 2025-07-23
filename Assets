@@ -1,0 +1,9 @@
+```
+   /assets
+   ├── hey_zaarvis.ppn          # From Picovoice Console
+   ├── avatar.png               # 512x512 transparent PNG
+   └── audio/
+       ├── greet.mp3
+       ├── thanks.mp3
+       └── default.mp3
+   ```

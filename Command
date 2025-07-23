@@ -1,0 +1,4 @@
+flutter create zaarvis_ai
+cd zaarvis_ai
+rm -rf lib/*  # ডিফল্ট ফাইল ডিলিট
+mkdir -p lib/{config,models,screens,services/{voice,ai,vision,database},widgets}

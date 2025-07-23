@@ -1,0 +1,16 @@
+name: zaarvis_ai
+description: AI voice assistant app
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.1.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_tts: ^3.8.2
+  permission_handler: ^11.3.0
+
+flutter:
+  uses-material-design: true

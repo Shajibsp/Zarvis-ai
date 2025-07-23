@@ -1,0 +1,39 @@
+
+```dart
+import 'dart:io';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:audioplayers/audioplayers.dart';
+
+class TextToSpeechService {
+  static final FlutterTts _tts = FlutterTts();
+  static final AudioPlayer _player = AudioPlayer();
+
+  static Future<void> speak(String text) async {
+    try {
+      if (Platform.isIOS && _isBangla(text)) {
+        await _playBanglaAudio(text);
+      } else {
+        await _tts.setLanguage(Platform.isIOS ? 'en-US' : 'bn-BD');
+        await _tts.speak(text);
+      }
+    } catch (e) {
+      debugPrint('TTS Error: $e');
+    }
+  }
+
+  static bool _isBangla(String text) => RegExp(r'[অ-হ]').hasMatch(text);
+
+  static Future<void> _playBanglaAudio(String phrase) async {
+    await _player.play(AssetSource('audio/${_mapPhrase(phrase)}.mp3'));
+  }
+
+  static String _mapPhrase(String phrase) {
+    const mappings = {
+      'হ্যালো': 'greet',
+      'ধন্যবাদ': 'thanks',
+      'হ্যাঁ': 'yes'
+    };
+    return mappings[phrase] ?? 'default';
+  }
+}
+```

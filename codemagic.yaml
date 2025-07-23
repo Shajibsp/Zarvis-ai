@@ -1,3 +1,10 @@
-git add .
-git commit -m "Initial commit with free version"
-git push origin main
+# codemagic.yaml
+workflows:
+  free-version:
+    name: Free Version Build
+    environment:
+      groups: [] # কোনো API কী লাগবে না
+    scripts:
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk

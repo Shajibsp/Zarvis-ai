@@ -2,7 +2,7 @@
 ```dart
 abstract class ApiConfig {
   // Azure Cognitive Services
-  static const azureTtsKey = 'YOUR_AZURE_KEY';
+  static const azureTtsKey = ;
   static const azureRegion = 'southeastasia';
   
   // Porcupine Wake Word

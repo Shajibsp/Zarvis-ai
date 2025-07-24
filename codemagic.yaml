@@ -3,7 +3,7 @@ workflows:
   free-version:
     name: Free Version Build
     environment:
-      groups: [] # কোনো API কী লাগবে না
+      groups: []
     scripts:
       - flutter build apk --release
     artifacts:

@@ -8,6 +8,3 @@ workflows:
       - flutter build apk --release
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
-
-git commit -m "Update Codemagic configuration"
-git push origin main

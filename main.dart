@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:zaarvis_ai/screens/home_screen.dart';
 
-void main() {
-  runApp(ZaarvisApp());
-}
+void main() => runApp(ZaarvisApp());
 
 class ZaarvisApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Zaarvis AI',
-      theme: ThemeData.dark(),
-      home: HomeScreen(),
-      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: Text('Zaarvis AI')),
+        body: Center(
+          child: Text('Hello Shojib Bhai! Zaarvis is Loading...', style: TextStyle(fontSize: 20)),
+        ),
+      ),
     );
   }
 }

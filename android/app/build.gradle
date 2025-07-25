@@ -1,8 +1,4 @@
-android {
-    namespace "com.example.zaarvis_ai"   // ← নিজের প্যাকেজ নাম
-    compileSdkVersion 34
-
-    buildscript {
+buildscript {
     ext.kotlin_version = '1.9.10' // ✅ Latest stable & compatible
 
     repositories {

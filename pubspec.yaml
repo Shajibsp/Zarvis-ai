@@ -8,18 +8,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  speech_to_text: ^5.5.0
-  flutter_tts: ^4.0.2
+  speech_to_text: ^6.1.0
+  flutter_tts: ^3.6.3
   avatar_glow: ^2.0.2
-  permission_handler: ^11.0.1
-  shared_preferences: ^2.2.2
-  provider: ^6.0.5
-  flutter_sound: ^9.2.13
-  just_audio: ^0.9.35
-  assets_audio_player: ^3.0.3+8
-  flutter_local_notifications: ^17.1.0
+  animated_text_kit: ^4.2.2
+  lottie: ^2.7.0
 
 flutter:
   uses-material-design: true
   assets:
-    - assets/zaarvis_avatar.png
+    - assets/animations/
